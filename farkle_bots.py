@@ -17,12 +17,13 @@ class Bot:
         self.round_set_aside = []
         self.round_used_in_score = [False,False,False,False,False,False]
 
-    def update_state(self, round_score,round_rollover,round_dice,round_set_aside,round_used_in_score):
+    def update_state(self, round_score,round_rollover,round_dice,round_set_aside,round_used_in_score,game_scores):
         self.round_score = round_score
         self.round_rollover = round_rollover
         self.round_dice = round_dice
         self.round_set_aside = round_set_aside
         self.round_used_in_score = round_used_in_score
+        self.game_scores = game_scores
 
 
     def set_dice_aside(self):

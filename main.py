@@ -2,7 +2,6 @@ import math
 import random
 import sys
 import time
-from numpy import cumsum
 
 from collections import defaultdict
 from multiprocessing import Pool
@@ -310,7 +309,7 @@ class Controller:
 
         while not farkle and min(set_aside) == False:
             farkle,round_score, round_rollover, used_in_score = self.score(dice,set_aside, round_rollover)
-            bot.update_state(round_score, round_rollover, dice,set_aside,used_in_score)
+            bot.update_state(round_score, round_rollover, dice,set_aside,used_in_score,game_scores)
 
             if DEBUG:
                 desc = "%d: Bot %24s has dice %20s with " + \
@@ -523,9 +522,9 @@ def run_simulation(thread_id, bots_per_game, games_per_thread, bots):
 
 if __name__ == "__main__":
 
-    games = 1000
+    games = 5000
     bots_per_game = 3
-    threads = 1
+    threads = 5
 
     if ANSI:
         print(chr(27) + "[2J", flush =  True)

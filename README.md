@@ -1,11 +1,11 @@
-#Farkle Fest 2k19
+# Farkle Fest 2k19
 
 In this challenge, we will be playing the semi-popular dice game Farkle.
 
 [Farkle](https://boardgamegeek.com/boardgame/3181/farkle) is a dice game that has players selecting to save dice or risk rerolling the die for more points to add to their total. Players should use probability, game-state considerations and opponent tendency to make their decisions.
 
 
-##How to play
+## How to play
 
 [Rules lifted from this PDF, which includes scoring. There are some differences that you should note after](https://www.elversonpuzzle.com/Farkle-instructions11.pdf)
 

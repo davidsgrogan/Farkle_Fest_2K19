@@ -150,7 +150,7 @@ class Controller:
             score = 2500
 
         if triples == 1:
-            if dice.count(1) == 3: score = 100
+            if dice.count(1) == 3: score = 1000
             if dice.count(2) == 3: score = 200
             if dice.count(3) == 3: score = 300
             if dice.count(4) == 3: score = 400
@@ -335,6 +335,7 @@ class Controller:
         else:
             farkle, round_score, round_rollover, round_used_in_score = self.score(dice,set_aside,round_rollover)
             round_score += round_rollover
+            self.player_farkles_in_row[index] = 0
 
         #first score requires going over the thresh_to_start
         if game_scores[index] != 0 or round_score >= self.thresh_to_start:
